@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Enhanced HTML form with lists, tables and media."/>
+    <title>Enhanced HTML Form</title>
+</head>
+<body>
+    <header>
+        <h1>Enhanced Form Submission</h1>
+        <p>Fill in the form below.</p>
+    </header>
+        <h2 id="benefits-heading">Why fill this form?</h2>
+        <ul>
+            <li>Register for newsletter</li>
+            <li>Access exclusie content</li>
+            <li>Get notified about upcoming events</li>
+        </ul>
+        <h2 id="schedule-heading">Upcoming Event</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025-08-25</td>
+                    <td>Web Development Workshop</td>
+                    <td>Nairobi</td>
+                </tr>
+                <tr>
+                    <td>2025-09-14</td>
+                    <td>HTML & Accessibility</td>
+                    <td>Mombasa</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="media-heading">Introduction Video</h2>
+        <video width="300" height="200" controls>
+            <source src="intro.mp4" type="video/mp4" />
+            Your browser does not support video.
+        </video>
+        <h2 id="form-heading">Sign Up Form</h2>
+        <form action="/submit" method="POST" autocomplete="on">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label><br />
+          <input type="text" id="fullname" name="fullname" placeholder="e.g. Collins Otinga" required /><br /><br />
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" placeholder="e.g. collinsotinga@gmail.com" required /><br /><br />
+          <label for="dob">Date of Birth:</label><br />
+          <input type="date" id="dob" name="dob" /><br /><br />
+          <label for="phone">Phone Number:</label><br />
+          <input type="tel" id="phone" name="phone" placeholder="+254701852624" pattern="[+0-9]{10,15}" /><br /><br />
+            </fieldset>
+            <fieldset>
+          <legend>Preferences</legend>
+          <label for="gender">Gender:</label><br />
+          <select id="gender" name="gender">
+            <option value="">Select</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+          </select><br /><br />
+ <label>Subscribe to:</label><br />
+          <input type="checkbox" id="news" name="subscribe" value="newsletter" />
+          <label for="news">Newsletter</label><br />
+          <input type="checkbox" id="events" name="subscribe" value="events" />
+          <label for="events">Event Updates</label><br /><br />
+          <label>Contact Preference*:</label><br />
+          <input type="radio" id="contact-email" name="contact_method" value="email" required />
+          <label for="contact-email">Email</label><br />
+          <input type="radio" id="contact-phone" name="contact_method" value="phone" required />
+          <label for="contact-phone">Phone</label><br /><br />
+          <label for="comments">Comments:</label><br />
+          <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Write something..."></textarea><br /><br />
+          <label for="ref">Referral Code:</label><br />
+          <input type="text" id="ref" name="ref" value="COLLINS25" readonly /><br /><br />
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        </form>
+    <footer>
+        <p>&copy; 2025 enhanced Form Inc. | Built with semantic HTML</p>
+    </footer>
+</body>
+</html>
